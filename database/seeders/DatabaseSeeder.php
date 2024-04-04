@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Accounts;
+use App\Models\Categorys;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -21,6 +22,30 @@ class DatabaseSeeder extends Seeder
         ]);
         */
         /**
+         * Categorys 
+         */
+        Categorys::factory()->create([
+            'scope' => 'A',
+            'category' => 'Planes de pensiones',
+            'subcategory' => '',
+        ]);
+        /**
+         * Categorys 
+         */
+        Categorys::factory()->create([
+            'scope' => 'A',
+            'category' => 'Cuentas corrientes',
+            'subcategory' => '',
+        ]);
+        /**
+         * Categorys 
+         */
+        Categorys::factory()->create([
+            'scope' => 'A',
+            'category' => 'Cuentas de valores',
+            'subcategory' => '',
+        ]);
+        /**
          * Account Unicaja - Cuenta corriente
          */
         Accounts::factory()->create([
@@ -30,6 +55,7 @@ class DatabaseSeeder extends Seeder
             'account' => '0030693853',
             'dc' => '35',
             'iban' => 'ES49', 
+            'type_id' => 2,
         ]);
         /**
          * Account Santander - Cuenta corriente
@@ -41,6 +67,7 @@ class DatabaseSeeder extends Seeder
             'account' => '2290054926',
             'dc' => '09',
             'iban' => 'ES74', 
+            'type_id' => 2,
         ]);
         /**
          * Account Santander - Plan de pensiones
@@ -52,6 +79,7 @@ class DatabaseSeeder extends Seeder
             'account' => '3055961458',
             'dc' => '',
             'iban' => '', 
+            'type_id' => 1,
         ]);
         /**
          * Account Arquia - Cuenta corriente
@@ -63,6 +91,7 @@ class DatabaseSeeder extends Seeder
             'account' => '1000170520',
             'dc' => '14',
             'iban' => 'ES47', 
+            'type_id' => 2,
         ]);
         /**
          * Account Arquia - Plan de pensiones
@@ -74,6 +103,7 @@ class DatabaseSeeder extends Seeder
             'account' => '0004827587',
             'dc' => '',
             'iban' => '', 
+            'type_id' => 1,
         ]);
         /**
          * Account Trade Republic - Cuenta corriente
@@ -85,6 +115,7 @@ class DatabaseSeeder extends Seeder
             'account' => '7017465257',
             'dc' => '',
             'iban' => 'DE86', 
+            'type_id' => 2,
         ]);
         
         /**
@@ -97,6 +128,7 @@ class DatabaseSeeder extends Seeder
             'account' => '6650775510',
             'dc' => '75',
             'iban' => 'ES16', 
+            'type_id' => 2,
         ]);
         /**
          * Account MyInvestor - Cartera automatizada
@@ -108,6 +140,7 @@ class DatabaseSeeder extends Seeder
             'account' => '6650780518',
             'dc' => '73',
             'iban' => 'ES16', 
+            'type_id' => 3,
         ]);
         /**
          * Account MyInvestor - Cuenta de valores Fondos
@@ -118,7 +151,8 @@ class DatabaseSeeder extends Seeder
             'office' => '7889',
             'account' => '6650780519',
             'dc' => '72',
-            'iban' => '', 
+            'iban' => '',
+            'type_id' => 3, 
         ]);
 
     }
