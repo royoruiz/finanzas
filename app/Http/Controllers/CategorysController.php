@@ -6,6 +6,7 @@ use App\Http\Requests\StoreCategorysRequest;
 use App\Http\Requests\UpdateCategorysRequest;
 use App\Models\Categorys;
 
+
 class CategorysController extends Controller
 {
     /**
@@ -13,7 +14,7 @@ class CategorysController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin/category');
     }
 
     /**
@@ -37,6 +38,7 @@ class CategorysController extends Controller
      */
     public function show(Categorys $categorys)
     {
+        
         //
     }
 

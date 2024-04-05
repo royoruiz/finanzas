@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\GoogleLoginController;
+use App\Http\Controllers\CategorysController;
+use App\Http\Controllers\AccountsController;
 use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
 
@@ -8,18 +10,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-/*
- 
-Route::get('/google/redirect', function () {
-    return Socialite::driver('google')->redirect();
-});
- 
-Route::get('/google/callback', function () {
-    $user = Socialite::driver('google')->user();
- 
-    // $user->token
-});
-*/
+
 
 Route::middleware([
     'auth:sanctum',
@@ -32,6 +23,10 @@ Route::middleware([
     Route::get('/bankmoves', function () {
         return view('bankmoves');
     })->name('bankmoves');
+    Route::get('/admin/category', [CategorysController::class, 'index'])
+    ->name('admin.category');
+    Route::get('/admin/accounts', [AccountsController::class, 'index'])
+    ->name('admin.accounts');
 });
 
 

@@ -96,6 +96,18 @@
                         </x-slot>
 
                         <x-slot name="content">
+                            <div class="block px-4 py-2 text-xs text-gray-400">
+                                {{ __('Parametric Settings') }}
+                            </div>
+
+                            <x-dropdown-link href="{{ route('admin.category') }}">
+                                {{ __('Categorys') }}
+                            </x-dropdown-link>
+
+                            <x-dropdown-link href="{{ route('admin.accounts') }}">
+                                {{ __('Accounts') }}
+                            </x-dropdown-link>
+
                             <!-- Account Management -->
                             <div class="block px-4 py-2 text-xs text-gray-400">
                                 {{ __('Manage Account') }}
