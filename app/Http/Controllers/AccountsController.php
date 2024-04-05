@@ -13,7 +13,9 @@ class AccountsController extends Controller
      */
     public function index()
     {
-        return view('admin/accounts');
+        $data = Accounts::all();
+
+        return view('admin/accounts')->with('data', $data);
     }
 
     /**
