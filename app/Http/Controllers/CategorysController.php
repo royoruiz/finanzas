@@ -14,7 +14,9 @@ class CategorysController extends Controller
      */
     public function index()
     {
-        return view('admin/category');
+        $data = Categorys::all();
+
+        return view('admin/category')->with('data', $data);
     }
 
     /**
