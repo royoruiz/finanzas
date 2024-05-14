@@ -12,7 +12,8 @@
         "laravel/socialite": "^5.12",
         "laravel/tinker": "^2.9",
         "livewire/livewire": "^3.0",
-        "socialiteproviders/google": "^4.1"
+        "socialiteproviders/google": "^4.1",
+        "royoruiz/laravel-views": "dev-master"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -23,6 +24,12 @@
         "phpunit/phpunit": "^11.0",
         "spatie/laravel-ignition": "^2.4"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/royoruiz/laravel-views"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "App\\": "app/",
