@@ -14,4 +14,18 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
+Cosas para desarrollo:
+npm run dev
+php artisan serve --host test.com
+
+En el .env debes generar la bbdd y la secretkey de google para el login con google.
+No hay otro login que no sea con google.
+
+Algunas instrucciones útiles antes de:
+Meter datos fake a la bbdd
+php artisan migrate:fresh --seed
+
+Usar el componente laravelviews.
+
+
 
