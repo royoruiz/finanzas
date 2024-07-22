@@ -24,7 +24,16 @@ class CategorysController extends Controller
      */
     public function create()
     {
-        //
+
+        // Assuming 'category', 'scope', and 'subcategory' are the correct column names in your categories table.
+        Categorys::create([
+            'category' => 'New Category',
+            'scope' => 'New Scope',
+            'subcategory' => 'New Subcategory',
+        ]);
+
+        // Redirect to the categories list with a success message, or handle as needed.
+        return redirect()->route('admin.category')->with('success', 'Category created successfully.');
     }
 
     /**

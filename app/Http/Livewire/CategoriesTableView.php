@@ -56,4 +56,7 @@ class CategoriesTableView extends TableView
         $this->success();
     }
 
+
+
+
 }

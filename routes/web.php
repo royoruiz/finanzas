@@ -25,6 +25,8 @@ Route::middleware([
     })->name('bankmoves');
     Route::get('/admin/category', [CategorysController::class, 'index'])
     ->name('admin.category');
+    Route::get('/admin/category/add', [CategorysController::class, 'create'])
+    ->name('admin.category.add');
     Route::get('/admin/accounts', [AccountsController::class, 'index'])
     ->name('admin.accounts');
 });
