@@ -30,6 +30,7 @@ class CategorysController extends Controller
             'category' => 'New Category',
             'scope' => 'New Scope',
             'subcategory' => 'New Subcategory',
+            'user_id' => auth()->id(),
         ]);
 
         // Redirect to the categories list with a success message, or handle as needed.

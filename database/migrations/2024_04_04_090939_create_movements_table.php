@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('concept');
             $table->string('dateraw');
             $table->timestamps();
+            $table->foreignId('user_id')->constrained();
         });
     }
 

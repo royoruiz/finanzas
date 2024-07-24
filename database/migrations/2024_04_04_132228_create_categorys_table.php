@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('category');
             $table->string('scope');
-            $table->string('subcategory');            
+            $table->string('subcategory'); 
+            $table->foreignId('user_id')->constrained();           
             $table->timestamps();
         });
     }

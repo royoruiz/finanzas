@@ -9,5 +9,14 @@ class Categorys extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['category','scope','subcategory'];
+    protected $fillable = ['category','scope','subcategory','user_id'];
+
+
+    /**
+     * Get the user that owns the category
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

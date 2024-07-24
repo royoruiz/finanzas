@@ -17,4 +17,12 @@ class Accounts extends Model
     public function getMovements(){
         return $this->hasMany(Movements::class);
     }
+
+    /**
+     * Get the user that owns the account
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

@@ -14,26 +14,31 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-
+        
         /**
          * Categorys 
          */
+        /**
         Categorys::factory()->create([
             'scope' => 'A',
             'category' => 'Planes de pensiones',
             'subcategory' => '',
         ]);
+        */
         /**
          * Categorys 
          */
+        /**
         Categorys::factory()->create([
             'scope' => 'A',
             'category' => 'Cuentas corrientes',
             'subcategory' => '',
         ]);
+        */
         /**
          * Categorys 
          */
+        /**
         Categorys::factory()->create([
             'scope' => 'A',
             'category' => 'Cuentas de valores',
@@ -41,5 +46,6 @@ class DatabaseSeeder extends Seeder
         ]);
         
         $this->call([AccountsSeeder::class]);
+        */
     }
 }
